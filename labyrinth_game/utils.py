@@ -1,5 +1,6 @@
-import labyrinth_game.constants as c
 import math as m
+
+import labyrinth_game.constants as c
 
 commands = c.COMMANDS
 
