@@ -38,14 +38,18 @@ def move_player(game_state, direction):
         print("Нельзя пойти в этом направлении.")
         
 def take_item(game_state, item_name):
-    room = game_state['current_room']
+    room = game_state['current_room']        
     if item_name in c.ROOMS[room]['items']:
-        game_state['player_inventory'].append(item_name)
-        c.ROOMS[room]['items'].remove(item_name)
-        print(f'Вы подняли: {item_name}')
+        if c.ROOMS[room]['puzzle']:
+            print(f'Ты не можешь взять {item_name}, пока не отгадаешь загадку')
+        else:            
+            game_state['player_inventory'].append(item_name)
+            c.ROOMS[room]['items'].remove(item_name)
+            print(f'Вы подняли: {item_name}')
+        if item_name == "treasure chest":
+            print("Ты не можешь взять сундук! Он слишком тяжелый")
     else: 
         print("Такого предмета здесь нет.")
-        
         
 def use_item(game_state, item_name):
     if item_name in game_state['player_inventory']:

@@ -71,14 +71,12 @@ def attempt_open_treasure(game_state):
     else:
         print('Сундук уже открыт или отсутствует.')
         
-        
 def show_help(commands):
     print("\nДоступные команды:")
     for command, description in commands.items():
         # Форматируем команду с отступом в 16 символов слева
         print(f"{command:<16} - {description}")
     
- 
 def pseudo_random(seed, modulo):
     x = m.sin((seed * 1.9898)) * 43.5453
     return int(modulo * (x - m.floor(x)))
@@ -116,10 +114,7 @@ def random_event(game_state):
                     and 'torch' not in game_state["player_inventory"]):
                     print("Опасность!")
                     trigger_trap(game_state)
-            
-     
-    
-    
+
 def check_user_command(user_command, game_state, func):
     if len(user_command) == 1:
         print("Введите команду полностью")

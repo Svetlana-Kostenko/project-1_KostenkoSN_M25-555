@@ -55,13 +55,10 @@ ROOMS = {
     }
 } 
 
-
-
 AWARDS = {
     'hall': 'treasure key',
     'library': 'rusty key'
 }
-
 
 COMMANDS = {
     "  go <direction>":"перейти в направлении (north/south/east/west)",

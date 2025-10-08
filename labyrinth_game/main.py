@@ -40,7 +40,6 @@ def process_command(game_state, command):
             
     return True        
             
-
 def main():
     """ main function """
     print("Добро пожаловать в Лабиринт сокровищ!")
