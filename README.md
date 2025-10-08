@@ -7,6 +7,7 @@
 make package-install,
 make install,
 make project.
+Требования: poetry, make.
 
 
 Вот что тебя ждет!
